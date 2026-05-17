@@ -3,8 +3,7 @@
 // Bluetooth MorseUs CW Paddle firmware Code v1.0
 // Designed for MorseUs iOS and MorseDx Mac applications
 //
-//  Created by Mehmet SIMSEK on 14.03.2026.
-//  Copyright © 2020 Mehmet SIMSEK. All rights reserved.
+//  Created by TA1AYH on 14.03.2026.
 //
 // April 2026 by tuaren@yahoo.com (73's TA1AYH)
 // **************************************************************
@@ -60,20 +59,18 @@ void IRAM_ATTR handleDAH() {
 //////////////////////////////
 class ServerCallbacks : public BLEServerCallbacks {
   void onConnect(BLEServer *pServer) override {
-    if (deviceConnected) {
-      // zaten biri bağlı → yeni bağlantıyı kes
+    if (deviceConnected) { 
       pServer->disconnect(pServer->getConnId());
       return;
     }
     deviceConnected = true;
-    oldDeviceConnected = true;  // Tekrar bağlanınca bu bayrağı güncelleyin
+    oldDeviceConnected = true;
     digitalWrite(Onboard_LED, HIGH);
     BLEDevice::stopAdvertising();
   }
 
   void onDisconnect(BLEServer *pServer) {
-    deviceConnected = false;
-    // Burada start() çağırmanıza gerek yok, loop halledecek
+    deviceConnected = false; 
   }
 };
 
