@@ -30,7 +30,6 @@ BLEServer *pServer;
 BLECharacteristic *notifyChar;
 TaskHandle_t notifyTaskHandle = NULL; 
 
-// Ultra hızlı Register bazlı ISR
 void IRAM_ATTR handlePaddle() {
   uint32_t gpio_in = GPIO.in;
   uint8_t newState = 0;
