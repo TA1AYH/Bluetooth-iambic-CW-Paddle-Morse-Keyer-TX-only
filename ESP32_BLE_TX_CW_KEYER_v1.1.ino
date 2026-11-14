@@ -1,11 +1,11 @@
 // **************************************************************
 // ESP32 Wroom (30 Pins), Low latency (5-7ms)
-// Bluetooth MorseUs CW Paddle firmware Code v1.1
+// Bluetooth MorseUs CW Paddle ESP32 firmware Code v1.1
 // Designed for MorseUs iOS and MorseDx Mac applications
 //
 //  Created by TA1AYH on 13.11.2026
 //
-// April 2026 by tuaren@yahoo.com (73's TA1AYH)
+// 2026 by tuaren@yahoo.com (73's TA1AYH)
 // **************************************************************
 
 #include <Arduino.h>
